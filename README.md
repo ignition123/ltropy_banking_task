@@ -1,4 +1,4 @@
-# eltropy_banking_task
+# Eltropy Banking Task
 Task Given By Eltropy For 1st Round Of Interview
 
 Config for database mongodb + Redis
