@@ -23,6 +23,14 @@ Code are in the src folder
 -> Web: Contains all routes list
 -> app.go is the init file
 
+It contains all apis related to admin, super admin, permissions, updating profile, signin, redistration, ressetting password, ApproveKYC, blocking userId, Created New BrokerId, Creating new broker id for broadcasting and interactive order placement it is developed on the basis of crypto exchange.
+
+All apis are json based request and response. 
+Content-Type: application/json
+
+All apis where session is required extra header must be used.
+Authorization : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1ZGVlcEBwb3VuemUuY29tIiwiZXhwIjoxNjEwMDE2NDI1fQ.9MazLsLcEACntdZIM31H3SMYI13SYhowzP_Ut3aMclI"
+
 It contains all admin roles. Please find the request and response sample with postman collection.
 
 It will have realtime pricefeed push to brokers and order placement in future cant share the entire code for now. The streaming is developed over Brahmaputra servers which is again an open source log streammer like kafka. It has a outgoing bandwidth of 1.5Gbps with 16core CPU with multiple topics and replication. Currently suppored for golang only.
