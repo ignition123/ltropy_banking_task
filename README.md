@@ -12,7 +12,7 @@ It is working in my personal Golang Framework called Haste its fast and has many
 
 Code are in the src folder
 
--> cns : Contains all code retated to framework
+-> cns : Contains all code retated to framework \r\n
 -> controllers: Contains all routes/apis
 -> lib: Contains misc methods like handling panics and writing logs etc.
 -> messages: contains all messages related to http response
