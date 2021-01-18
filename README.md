@@ -12,16 +12,16 @@ It is working in my personal Golang Framework called Haste its fast and has many
 
 Code are in the src folder
 
- -> cns : Contains all code retated to framework
- -> controllers: Contains all routes/apis
- -> lib: Contains misc methods like handling panics and writing logs etc.
- -> messages: contains all messages related to http response
- -> middlewares: contains session validation with redis
- -> models: contains all mongodb queries
- -> objects: contains all structure for request, response and parsing of data
- -> RequestValidation: contains all validation rules checking the incomming http request
- -> Web: Contains all routes list
- -> app.go is the init file
+  -> cns : Contains all code retated to framework
+  -> controllers: Contains all routes/apis
+  -> lib: Contains misc methods like handling panics and writing logs etc.
+  -> messages: contains all messages related to http response
+  -> middlewares: contains session validation with redis
+  -> models: contains all mongodb queries
+  -> objects: contains all structure for request, response and parsing of data
+  -> RequestValidation: contains all validation rules checking the incomming http request
+  -> Web: Contains all routes list
+  -> app.go is the init file
 
 It contains all apis related to admin, super admin, permissions, updating profile, signin, redistration, ressetting password, ApproveKYC, blocking userId, Created New BrokerId, Creating new broker id for broadcasting and interactive order placement it is developed on the basis of crypto exchange.
 
