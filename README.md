@@ -11,6 +11,16 @@ Mongodb":"mongodb://localhost:27017/?replicaSet=replicaSet",
 
 HttpPort : 3500
 
+Install libraries
+
+go get github.com/dgrijalva/jwt-go
+
+go get github.com/go-redis/redis
+
+go get go.mongodb.org/mongo-driver
+
+go get github.com/gorilla/websocket
+
 This Project is not exactly the requirement you have asked but quite similar. Developing a crypto exchange for someone and it has all such features even more. Kindly look into the code.
 It is working in my personal Golang Framework called Haste its fast and has many features like http2 streaming, RPC and middlewares etc. Same can be created using Golang Gin a lightweight open source framework with out much changes
 
