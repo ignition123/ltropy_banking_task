@@ -1,0 +1,59 @@
+
+[{
+    "_id" : ObjectId("5ff16a2d901d955360afbfc2"),
+    "email" : "sudeep@pounze.com",
+    "name" : "Sudeep Dasgupta",
+    "password" : "6f2392fac10e25f7a448ea7dce7b6e7235c6b1b2961c2da850cafe370b64148b",
+    "LUT" : ISODate("2021-01-04T07:35:45.517Z"),
+    "CreatedDate" : ISODate("2021-01-03T06:54:37.152Z"),
+    "superAdmin" : true,
+    "permissions" : null,
+    "dp" : null,
+    "DOB" : "25/12/1991",
+    "designation" : "Principal Software Engineer",
+    "nickName" : "IgN!TiOn"
+},
+{
+    "_id" : ObjectId("5ff2182d21d3b28e7bde0e44"),
+    "permissions" : {
+        "createAdmin" : true,
+        "kyc" : {
+            "kycComplete" : true,
+            "approveContact" : true
+        },
+        "brokers" : {
+            "account_blocked" : true,
+            "update_profile" : true
+        },
+        "exchange_push" : {
+            "messages" : true
+        }
+    },
+    "email" : "sudeep.ignition@gmail.com",
+    "name" : "Sudeep Dasgupta",
+    "password" : "ff4bc8171792d0ac596bc8b061e7bbb492d2a56894cf176d24fd0d16d292bbe0",
+    "dp" : null,
+    "LUT" : ISODate("2021-01-05T17:05:49.050Z"),
+    "CreatedDate" : ISODate("2021-01-03T19:17:01.503Z"),
+    "superAdmin" : false
+}]
+
+
+db.companies.insertOne({
+    "brokerName":"Pounze",
+    "brokerAddress":"Noida Sector 19, C-310",
+    "zipCode":201301,
+    "country":"India",
+    "state":"Uttar Pradesh",
+    "city":"Noida",
+    "companyRegistrationNo":"2121212121",
+    "companyContactNumber":9560488339,
+    "companyEmailAddress":"sudeep@pounze.com",
+    "LUT":new Date(),
+    "CreatedTime":new Date(),
+    "KYC":false,
+    "Email_OTP":5677,
+    "Email_Approved":true,
+    "Contact_Approved":false,
+    "freezeAccount":false
+})

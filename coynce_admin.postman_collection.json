@@ -1,0 +1,460 @@
+{
+	"info": {
+		"_postman_id": "3d3aabdf-e611-466b-b797-8c976d9d3a6f",
+		"name": "coynce_admin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1ZGVlcEBwb3VuemUuY29tIiwiZXhwIjoxNjEwMjE1NzQ1fQ.H_M0b7QNKpsUw82xucq16bBoPgohmst-aa7E6bk3HnM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"sudeep.ignition@gmail.com\",\r\n    \"name\":\"Sudeep Dasgupta\",\r\n    \"superAdmin\":false,\r\n    \"permissions\":{\r\n        \"kyc\":{\r\n            \"approveContact\":true,\r\n            \"kycComplete\":true\r\n        },\r\n        \"brokers\":{\r\n            \"account_blocked\":true,\r\n            \"update_profile\":true,\r\n            \"freeze_account\":true,\r\n            \"create_new_trading_id\":true,\r\n            \"reset_broker_password\":true\r\n        },\r\n        \"createAdmin\":true,\r\n        \"exchange_push\":{\r\n            \"messages\":true\r\n        }\r\n    },\r\n    \"dp\":null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3500/admin/registration",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3500",
+					"path": [
+						"admin",
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"sudeep@pounze.com\",\r\n    \"password\":\"IgN!TiOn1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3500/admin/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3500",
+					"path": [
+						"admin",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ApproveContact",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Password Reset",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1ZGVlcEBwb3VuemUuY29tIiwiZXhwIjoxNjA5NzAxNzQwfQ.HoAzCwl69JBQoflINHdPILCJdZo9u63FQF_8AkUs5741",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"sudeep.ignition@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3500/admin/password_reset",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3500",
+					"path": [
+						"admin",
+						"password_reset"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1ZGVlcEBwb3VuemUuY29tIiwiZXhwIjoxNjA5NzAxNzQwfQ.HoAzCwl69JBQoflINHdPILCJdZo9u63FQF_8AkUs574",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"IgN!TiOn1\",\r\n    \"confirm_password\":\"IgN!TiOn1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3500/admin/password_update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3500",
+					"path": [
+						"admin",
+						"password_update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Permission",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1ZGVlcEBwb3VuemUuY29tIiwiZXhwIjoxNjEwMjE1NzQ1fQ.H_M0b7QNKpsUw82xucq16bBoPgohmst-aa7E6bk3HnM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"sudeep.ignition@gmail.com\",\r\n    \"superAdmin\":false,\r\n    \"permissions\":{\r\n        \"kyc\":{\r\n            \"approveContact\":true,\r\n            \"kycComplete\":true\r\n        },\r\n        \"brokers\":{\r\n            \"account_blocked\":true,\r\n            \"update_profile\":true,\r\n            \"freeze_account\":true,\r\n            \"create_new_trading_id\":true,\r\n            \"reset_broker_password\":true\r\n        },\r\n        \"createAdmin\":true,\r\n        \"exchange_push\":{\r\n            \"messages\":true\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3500/admin/update_permission",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3500",
+					"path": [
+						"admin",
+						"update_permission"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1ZGVlcEBwb3VuemUuY29tIiwiZXhwIjoxNjA5NzQyOTA2fQ.Iyo15U0RE2TQ71ZbfC8qToFUU5AFOOhYXeeNZjmE7cw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3500/admin/update_profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3500",
+					"path": [
+						"admin",
+						"update_profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Super Admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1ZGVlcEBwb3VuemUuY29tIiwiZXhwIjoxNjA5Nzg1Njk2fQ.iimxhi0pABvSp4m6fMQtMHoigACgx9E6325gkt56T0Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"sudeep.ignition@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3500/admin/add_super_admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3500",
+					"path": [
+						"admin",
+						"add_super_admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1ZGVlcEBwb3VuemUuY29tIiwiZXhwIjoxNjEwMDE2NDI1fQ.9MazLsLcEACntdZIM31H3SMYI13SYhowzP_Ut3aMclI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3500/admin/get_profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3500",
+					"path": [
+						"admin",
+						"get_profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Broker Contact Approved",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1ZGVlcEBwb3VuemUuY29tIiwiZXhwIjoxNjEwMDIzOTkzfQ.tDtNoF4M0P27NL7hVxJlAMcoIji01es4JjCkQyqwDf8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"5ff704d44abac7a929598dc2\",\r\n    \"password\":\"IgN!TiOn1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3500/broker/approve_contacts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3500",
+					"path": [
+						"broker",
+						"approve_contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Freeze Broker Account",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1ZGVlcEBwb3VuemUuY29tIiwiZXhwIjoxNjEwMDIzOTkzfQ.tDtNoF4M0P27NL7hVxJlAMcoIji01es4JjCkQyqwDf8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"5ff704d44abac7a929598dc2\",\r\n    \"password\":\"IgN!TiOn1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3500/broker/freeze_broker_account",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3500",
+					"path": [
+						"broker",
+						"freeze_broker_account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New Interactive Id",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1ZGVlcEBwb3VuemUuY29tIiwiZXhwIjoxNjEwMTMxMjgwfQ.rveSJeFUWT-ReJQvOqMFzVMZmsxt0da2pJ5uy40UuG0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"5ff704d44abac7a929598dc2\",\r\n    \"password\":\"IgN!TiOn1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3500/broker/create_new_interactive_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3500",
+					"path": [
+						"broker",
+						"create_new_interactive_id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New Broadcast Id",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1ZGVlcEBwb3VuemUuY29tIiwiZXhwIjoxNjEwMTMxMjgwfQ.rveSJeFUWT-ReJQvOqMFzVMZmsxt0da2pJ5uy40UuG0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"5ff704d44abac7a929598dc2\",\r\n    \"password\":\"IgN!TiOn1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3500/broker/create_new_broadcast_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3500",
+					"path": [
+						"broker",
+						"create_new_broadcast_id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Broker Id",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1ZGVlcEBwb3VuemUuY29tIiwiZXhwIjoxNjEwMTMxMjgwfQ.rveSJeFUWT-ReJQvOqMFzVMZmsxt0da2pJ5uy40UuG0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"5ff704d44abac7a929598dc2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3500/broker/get_broker_ids",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3500",
+					"path": [
+						"broker",
+						"get_broker_ids"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
