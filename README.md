@@ -29,3 +29,5 @@ It will have realtime pricefeed push to brokers and order placement in future ca
 Brahmaputra URL: 
 Server / Client: https://github.com/ignition123/brahmaputra
 Haste Framework: https://github.com/pounze/go_haste
+
+After connecting to redis and mongodb click the go_build.exe for window platform. It is horizontal scalable using any Load balancer like HA Proxy or Nginx.
